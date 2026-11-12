@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จัดการข้อมูลนักเรียน</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand">🛡️ Admin Dashboard</div><button id="logoutBtn" class="btn btn-small">ออกจากระบบ</button></header>
+  <main class="container wide">
+    <section class="intro"><span class="eyebrow">ADMIN PANEL</span><h1>จัดการข้อมูลนักเรียน</h1><p>ตรวจสอบ ค้นหา แก้ไข และลบข้อมูลผู้ลงทะเบียน</p></section>
+    <section class="stats"><div class="stat-card"><span>นักเรียนที่ลงทะเบียน</span><strong id="totalCount">-</strong></div></section>
+    <section class="panel">
+      <div class="toolbar"><h2>รายชื่อนักเรียน</h2><input id="searchInput" class="search" placeholder="ค้นหาชื่อหรือเลขนักศึกษา..."></div>
+      <p id="adminMessage" class="message" role="status"></p>
+      <div class="table-wrap"><table><thead><tr><th>เลขนักศึกษา</th><th>ชื่อ-นามสกุล</th><th>อายุ</th><th>แผนก</th><th>สาขา</th><th>ระดับชั้น</th><th>คติประจำใจ</th><th>จัดการ</th></tr></thead><tbody id="studentRows"><tr><td colspan="8">กำลังโหลดข้อมูล...</td></tr></tbody></table></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script><script src="js/admin.js"></script>
+</body>
+</html>

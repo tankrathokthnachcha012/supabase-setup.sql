@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ระบบลงทะเบียนนักเรียน</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">🎓 ระบบลงทะเบียนนักเรียน</div>
+    <a class="admin-link" href="admin-login.html">เข้าสู่ระบบ Admin</a>
+  </header>
+  <main class="container">
+    <section class="intro">
+      <span class="eyebrow">STUDENT REGISTRATION</span>
+      <h1>ลงทะเบียนข้อมูลนักเรียน</h1>
+      <p>กรุณากรอกข้อมูลให้ครบถ้วนและตรวจสอบความถูกต้องก่อนส่งข้อมูล</p>
+    </section>
+    <section class="panel">
+      <h2>แบบฟอร์มลงทะเบียน</h2>
+      <form id="registerForm" class="form-grid">
+        <label>ชื่อผู้ใช้<input name="username" required maxlength="50" placeholder="ตั้งชื่อผู้ใช้"></label>
+        <label>ชื่อ<input name="first_name" required maxlength="100" placeholder="ชื่อจริง"></label>
+        <label>นามสกุล<input name="last_name" required maxlength="100" placeholder="นามสกุล"></label>
+        <label>อายุ<input name="age" type="number" min="1" max="100" required placeholder="อายุ"></label>
+        <label>แผนกวิชา<input name="department" required maxlength="150" placeholder="เช่น แผนกวิชาเทคโนโลยีสารสนเทศ"></label>
+        <label>สาขาวิชา<input name="major" required maxlength="150" placeholder="ระบุสาขาวิชา"></label>
+        <label>เลขประจำตัวนักศึกษา<input name="student_id" required maxlength="30" placeholder="เลขประจำตัวนักศึกษา"></label>
+        <label>ระดับชั้น
+          <select name="level" required>
+            <option value="">-- เลือกระดับชั้น --</option>
+            <option>ปวช. 1</option><option>ปวช. 2</option><option>ปวช. 3</option>
+            <option>ปวส. 1</option><option>ปวส. 2</option>
+          </select>
+        </label>
+        <label class="full">คติประจำใจ<textarea name="motto" rows="3" maxlength="500" placeholder="เขียนคติประจำใจของคุณ"></textarea></label>
+        <div class="full"><button class="btn" type="submit">ส่งข้อมูลลงทะเบียน</button><p id="formMessage" class="message" role="status"></p></div>
+      </form>
+    </section>
+  </main>
+  <footer>ระบบลงทะเบียนนักเรียน • Student Registration</footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/config.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
